@@ -1,4 +1,4 @@
-# Create Freeman chaincodes from input feature classes
+# Create Freeman chaincodes from input feature classes at various resolutions
 # Ver 0.3
 
 # Imports
