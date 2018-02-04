@@ -1,4 +1,4 @@
-# Create chaincodes from input feature class
+# Create Freeman chaincodes from input feature classes
 # Ver 0.3
 
 # Imports
@@ -7,7 +7,6 @@ from math import ceil, floor, atan, sin, cos, radians, pi
 import numpy as np
 import time
 import copy
-import compareCode
 
 start_time = time.time()
 
@@ -184,9 +183,5 @@ rotatePolyLines(tmpFC)
 # Generate Chaincodes
 arcpy.AddMessage("Creating chaincodes of the test shapefile")
 testCodes = getAllChainCodes(tmpFC, resolutions)
-
-# Invoke the string similarity algorithm
-arcpy.AddMessage("Comparing similarity between reference and test features..")
-compareCode.performComparison(resultFile, testCodes, refCodes[0])
 
 arcpy.AddMessage( "Total execution time %.3fs" % (time.time() - start_time))
